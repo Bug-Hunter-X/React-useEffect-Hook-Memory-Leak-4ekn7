@@ -1,0 +1,4 @@
+# React useEffect Hook Memory Leak
+This repository demonstrates a common error in React applications involving the `useEffect` hook: forgetting to include a cleanup function to prevent memory leaks.  When a component unmounts, any side effects initiated within `useEffect` should be cleaned up to avoid issues like continued interval calls or unneeded subscriptions.
+
+The `bug.js` file showcases the problematic code, while `bugSolution.js` provides the corrected version.  This example highlights the importance of using the cleanup function (second argument to `useEffect`) for proper resource management in React components.
